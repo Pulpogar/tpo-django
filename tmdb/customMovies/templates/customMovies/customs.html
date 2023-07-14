@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}The MovieDB | Buscar {% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'core/css/search.css' %}" />
+
+    <div class="paginacion"><h5 id="resultSearch">Películas agregadas manualmente</h5></div>
+    <div class="contenedor" id="contenedor">
+        {% for movie in movies %}
+        <div class="movie">
+            <img src="{{movie.image.url}}" />
+            <div class="movie-info">
+                <h3>{{movie.tittle}}</h3>
+                <span style="background-color:blue;">{{movie.rate}}</span>
+            </div>
+            <div class="overview">
+                <h3>Sinopsis:</h3><br>
+                {{movie.overview}}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-items">TPO Frontend - Codo a codo 4.0</div>
+        <div class="footer-items">
+          <ul class="ul">Nuestras redes
+            <li class="li"><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+            <li class="li"><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i></a></li>
+            <li class="li"><a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube fa-2xl"></i></a></li>
+            <li class="li"><a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-square-twitter fa-2xl"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-items">Todos los derechos reservados.</div>
+    </div>
+    </footer>
+
+{% endblock %}

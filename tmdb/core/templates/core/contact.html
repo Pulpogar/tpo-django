@@ -1,0 +1,138 @@
+{% extends 'core/base.html' %}
+{% block title %}The MovieDB | Contacto{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'core/css/contact.css' %}" />
+<main>
+<div class="paginacion"><h5 id="resultSearch">Formulario de contacto</h5></div>
+
+      <form action="" class="formulario" id="formulario">
+        <!-- Grupo: apellido -->
+        <div class="formulario__grupo" id="grupo__nombre">
+          <label for="nombre" class="formulario__label">Nombre</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="text"
+              class="formulario__input"
+              name="nombre"
+              id="nombre"
+              placeholder="John"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El nombre tiene que ser de 4 a 16 dígitos y solo puede contener
+            letras.
+          </p>
+        </div>
+
+        <!-- Grupo: Apellido -->
+        <div class="formulario__grupo" id="grupo__apellido">
+          <label for="apellido" class="formulario__label">Apellido</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="text"
+              class="formulario__input"
+              name="apellido"
+              id="apellido"
+              placeholder="Dalton"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El apellido tiene que ser de 4 a 16 dígitos y solo puede contener
+            letras.
+          </p>
+        </div>
+
+
+        <!-- Grupo: Correo Electronico -->
+        <div class="formulario__grupo" id="grupo__correo">
+          <label for="correo" class="formulario__label"
+            >Correo Electrónico</label
+          >
+          <div class="formulario__grupo-input">
+            <input
+              type="email"
+              class="formulario__input"
+              name="correo"
+              id="correo"
+              placeholder="correo@correo.com"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El correo solo puede contener letras, numeros, puntos, guiones y
+            guion bajo.
+          </p>
+        </div>
+
+        <!-- Grupo: Teléfono -->
+        <div class="formulario__grupo" id="grupo__telefono">
+          <label for="telefono" class="formulario__label">Teléfono</label>
+          <div class="formulario__grupo-input">
+            <input
+              type="text"
+              class="formulario__input"
+              name="telefono"
+              id="telefono"
+              placeholder="4491234567"
+            />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El telefono solo puede contener numeros (max. 14 dígitos).
+          </p>
+        </div>
+
+        <!-- Grupo: Terminos y Condiciones -->
+        <div class="formulario__grupo" id="grupo__terminos">
+          <label class="formulario__label">
+            <input
+              class="formulario__checkbox"
+              type="checkbox"
+              name="terminos"
+              id="terminos"
+            />
+            Acepto los Terminos y Condiciones
+          </label>
+        </div>
+
+        <div class="formulario__mensaje" id="formulario__mensaje">
+          <p>
+            <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor
+            completa todos los campos.
+          </p>
+        </div>
+
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+          <button type="submit" class="formulario__btn">Enviar</button>
+          <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+            Formulario enviado exitosamente!
+          </p>
+        </div>
+      </form>
+</main>
+
+<footer>
+  <div class="footer">
+    <div class="footer-items">TPO Frontend - Codo a codo 4.0</div>
+    <div class="footer-items">
+      <ul class="ul">Nuestras redes
+        <li class="li"><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+        <li class="li"><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i></a></li>
+        <li class="li"><a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube fa-2xl"></i></a></li>
+        <li class="li"><a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-square-twitter fa-2xl"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-items">Todos los derechos reservados.</div>
+</div>
+</footer>
+
+<script src="{% static 'core/js/contact.js' %}"></script>
+
+{% endblock %}
+

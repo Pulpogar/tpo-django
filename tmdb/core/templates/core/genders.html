@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}The MovieDB | Géneros{% endblock %}
+
+{% block content %}
+      <link rel="stylesheet" href="{% static 'core/css/genders.css' %}" />
+
+      <div class="paginacion"><h5 id="resultSearch">Géneros disponibles</h5></div>
+      <div class="contenedor" id="generos"></div>
+
+      <footer>
+        <div class="footer">
+          <div class="footer-items">TPO Frontend - Codo a codo 4.0</div>
+          <div class="footer-items">
+            <ul class="ul">Nuestras redes
+              <li class="li"><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+              <li class="li"><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i></a></li>
+              <li class="li"><a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube fa-2xl"></i></a></li>
+              <li class="li"><a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-square-twitter fa-2xl"></i></a></li>
+            </ul>
+          </div>
+          <div class="footer-items">Todos los derechos reservados.</div>
+      </div>
+      </footer>
+
+      <script src="{% static 'core/js/genders.js' %}"></script>
+{% endblock %}
+

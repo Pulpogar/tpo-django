@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}The MovieDB | Reviews {% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'core/css/review.css' %}" />
+
+    <iframe class="rev_iframe" src="https://www.sensacine.com/peliculas/criticas-sensacine/"></iframe>
+    <iframe class="rev_iframe" src="https://www.tomatazos.com/peliculas"></iframe>
+    <iframe class="rev_iframe" src="https://www.ecartelera.com/criticas/"></iframe>
+    <iframe class="rev_iframe" src="https://www.espinof.com/categoria/criticas"></iframe>        
+
+    <script src="{% static 'core/js/app.js' %}"></script>
+
+{% endblock %}
